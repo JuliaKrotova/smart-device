@@ -1,0 +1,36 @@
+.page-header {
+  background-color: #1B2D37;
+  background-image: url("/img/background-desktop@1x.png");
+  color: #FFFFFF;
+}
+
+.page-header__wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-left: 13%;
+  padding-right: 13%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-header__container {
+  margin-top: 33px;
+  width: 50%;
+}
+
+.page-header__logo-name {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 29px;
+  margin: 0;
+}
+
+.page-header__logo-description {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #788891;
+  margin: 0;
+}

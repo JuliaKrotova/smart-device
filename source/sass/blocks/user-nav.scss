@@ -1,0 +1,106 @@
+.user-nav {
+  width: 50%;
+  margin-top: 33px;
+}
+
+.user-nav ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-nav li {
+padding-bottom: 20px;
+}
+
+.user-nav__mail {
+  position: relative;
+  padding-left: 4%;
+  padding-right: 6%;
+}
+
+.user-nav__mail::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 19px;
+  height: 14px;
+  background-image: url("/img/envelope.svg");
+  top: 3;
+  left: -11%;
+}
+
+.user-nav__phone {
+  position: relative;
+  padding-right: 2%;
+  white-space: nowrap;
+}
+
+.user-nav__phone::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 17px;
+  height: 17px;
+  background-image: url("/img/phone-call.svg");
+  top: 3;
+  left: -18%;
+}
+
+.user-nav a {
+  color: #ffffff;
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  &:active,
+  &:focus {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.user-nav .user-nav__button {
+  font-weight: bold;
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
+  padding-top: 14px;
+  padding-bottom: 18px;
+  padding-left: 12px;
+  padding-right: 13px;
+
+  &:hover {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.5);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  &:active,
+  &:focus {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
+    outline: none;
+  }
+}
+
+
+    @media (max-width: 1023px) {
+      .user-nav__mail a,
+      .user-nav__phone a,
+      .user-nav__call {
+        display: none;
+    }
+
+      .user-nav ul {
+        justify-content: flex-end;
+      }
+  	}
+
+    @media (max-width: 767px) {
+
+    }
