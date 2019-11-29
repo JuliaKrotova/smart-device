@@ -1,11 +1,11 @@
 .user-nav {
-  width: 50%;
   margin-top: 33px;
+  flex-grow: 1;
 }
 
 .user-nav ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-wrap: wrap;
   align-items: center;
   list-style: none;
@@ -14,13 +14,12 @@
 }
 
 .user-nav li {
-padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .user-nav__mail {
   position: relative;
-  padding-left: 4%;
-  padding-right: 6%;
+  padding-right: 124px;
 }
 
 .user-nav__mail::before {
@@ -31,12 +30,12 @@ padding-bottom: 20px;
   height: 14px;
   background-image: url("/img/envelope.svg");
   top: 3;
-  left: -11%;
+  left: -40px;
 }
 
 .user-nav__phone {
   position: relative;
-  padding-right: 2%;
+  padding-right: 50px;
   white-space: nowrap;
 }
 
@@ -48,7 +47,7 @@ padding-bottom: 20px;
   height: 17px;
   background-image: url("/img/phone-call.svg");
   top: 3;
-  left: -18%;
+  left: -33px;
 }
 
 .user-nav a {
@@ -68,10 +67,7 @@ padding-bottom: 20px;
   font-weight: bold;
   background-color: transparent;
   border: 1px solid #FFFFFF;
-  padding-top: 14px;
-  padding-bottom: 18px;
-  padding-left: 12px;
-  padding-right: 13px;
+  padding: 14px 33px 13px 32px;
 
   &:hover {
     background-color: transparent;
@@ -87,20 +83,47 @@ padding-bottom: 20px;
     outline: none;
   }
 }
+@media (max-width: 1023px) {
+  .user-nav__call,
+  .user-nav__mail a,
+  .user-nav__phone a {
+    display: none;
+  }
 
+  .user-nav ul {
+    justify-content: flex-end;
+  }
 
-    @media (max-width: 1023px) {
-      .user-nav__mail a,
-      .user-nav__phone a,
-      .user-nav__call {
-        display: none;
-    }
+  .user-nav__phone {
+    padding-right: 0;
+  }
 
-      .user-nav ul {
-        justify-content: flex-end;
-      }
-  	}
+  .user-nav__mail {
+    padding-right: 60px;
+  }
 
-    @media (max-width: 767px) {
+  .user-nav__mail::before,
+  .user-nav__phone::before {
+    background-size: 100% auto;
+  }
 
-    }
+  .user-nav__mail::before {
+    width: 25.33px;
+    height: 18.67px;
+  }
+
+  .user-nav__phone::before {
+    width: 24px;
+    height: 24px;
+    top: 0;
+  }
+}
+@media (max-width: 767px) {
+  .user-nav__mail {
+    padding-right: 45px;
+  }
+
+  .page-header__logo p {
+    display: none;
+  }
+}

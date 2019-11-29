@@ -1,36 +1,33 @@
 @font-face {
-    font-family: "Roboto Condensed";
-    src: local("Roboto Condensed"), local("RobotoCondensed-Regular"), url("../fonts/Robotocondensed.woff2") format("woff2"), url("../fonts/Robotocondensed.woff") format("woff");
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Roboto Condensed";
+  src: local("Roboto Condensed"), local("RobotoCondensed-Regular"), url("../fonts/Robotocondensed.woff2") format("woff2"), url("../fonts/Robotocondensed.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
-
 @font-face {
-    font-family: "Roboto Condensed";
-    src: local("Roboto Condensed Bold"), local("RobotoCondensed-Bold"), url("../fonts/Robotocondensedbold.woff2") format("woff2"), url("../fonts/Robotocondensedbold.woff") format("woff");
-    font-weight: 700;
-    font-style: normal;
+  font-family: "Roboto Condensed";
+  src: local("Roboto Condensed Bold"), local("RobotoCondensed-Bold"), url("../fonts/Robotocondensedbold.woff2") format("woff2"), url("../fonts/Robotocondensedbold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
 }
-
 @font-face {
-    font-family: 'Roboto';
-    src: local('Roboto'), local('Roboto-Regular'), url('../fonts/Roboto.woff2') format('woff2'), url('../fonts/Roboto.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
+  font-family: 'Roboto';
+  src: local('Roboto'), local('Roboto-Regular'), url("../fonts/Roboto.woff2") format('woff2'), url("../fonts/Roboto.woff") format('woff');
+  font-weight: 500;
+  font-style: normal;
 }
-
 @font-face {
-    font-family: "PT Mono";
-    src: local("PT Mono"), local("PTMono-Regular"), url("../fonts/ptmono.woff2") format("woff2"), url("../fonts/ptmono.woff") format("woff");
-    font-weight: 400;
-    font-style: normal;
+  font-family: "PT Mono";
+  src: local("PT Mono"), local("PTMono-Regular"), url("../fonts/ptmono.woff2") format("woff2"), url("../fonts/ptmono.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
-
 @import "normalize.sass";
 @import "variables.scss";
 @import "blocks/visually-hidden.scss";
 @import "blocks/page-header.scss";
 @import "blocks/user-nav.scss";
+@import "blocks/page-footer.scss";
 
 body {
   font-family: "PT Mono", "Arial", sans-serif;
@@ -62,10 +59,7 @@ img {
   background: #00B2FF;
   border-radius: 5px;
   border: none;
-  padding-top: 17px;
-  padding-bottom: 14px;
-  padding-left: 28px;
-  padding-right: 28px;
+  padding: 17px 28px 14px;
 
   &:hover {
     background-color: #71c3f2;
