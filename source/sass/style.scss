@@ -28,6 +28,8 @@
 @import "blocks/page-header.scss";
 @import "blocks/user-nav.scss";
 @import "blocks/page-footer.scss";
+@import "blocks/promo.scss";
+@import "blocks/advantages.scss";
 
 body {
   font-family: "PT Mono", "Arial", sans-serif;
@@ -50,6 +52,7 @@ img {
 .button {
   display: inline-block;
   font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: bold;
   font-size: 14px;
   line-height: 16px;
   text-align: center;
@@ -59,7 +62,7 @@ img {
   background: #00B2FF;
   border-radius: 5px;
   border: none;
-  padding: 17px 28px 14px;
+  padding: 17px 28px 17px;
 
   &:hover {
     background-color: #71c3f2;

@@ -3,8 +3,6 @@
   width: 100%;
 }
 
-
-
 .page-footer__wrapper {
   box-sizing: border-box;
   padding-left: 25px;
@@ -63,7 +61,8 @@
 
 .page-footer__sections {
   margin-top: 65px;
-  width: 450px;
+  width: 430px;
+  padding-right: 20px;
 }
 
 .page-footer__sections button,
@@ -173,6 +172,7 @@
     width: 50%;
     margin-bottom: 33px;
     margin-top: 0;
+    padding-right: 0;
   }
 
     .page-footer__sections-container{
@@ -213,7 +213,9 @@
   }
 
   .page-footer__date {
-    display: none;
+    position: absolute;
+    left: 44%;
+    top: 10px;
   }
 }
 
@@ -229,7 +231,9 @@
     margin-top: 45px;
   }
 
-  .page-footer__top {}
+  .page-footer__container-logo {
+    margin-bottom: 80px;
+  }
 
   .page-footer__social {
     margin-bottom: 50px;
@@ -260,6 +264,7 @@
     height: 16px;
   }
 
+  .page-footer__sections button
   .page-footer__address button {
     margin-top: 28px;
   }
@@ -320,7 +325,9 @@
     width: 100%;
   }
 
-  .page-footer__sections--close ul {
+  .page-footer__sections--close ul,
+  .page-footer__address--close ul,
+  .page-footer__address--close p{
     display: none;
   }
 
@@ -332,6 +339,7 @@
     margin-bottom: 30px;
   }
 
+  .page-footer__sections h2,
   .page-footer__address h2 {
     margin-top: 28px;
     margin-bottom: 34px;
@@ -351,5 +359,12 @@
   .page-footer__bottom p {
     margin-top: 13px;
     margin-bottom: 13px;
+  }
+
+  .page-footer__date {
+    left: 0;
+    top: 105px;
+    width: 100%;
+    text-align: center;
   }
 }
