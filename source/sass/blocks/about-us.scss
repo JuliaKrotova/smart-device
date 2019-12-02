@@ -37,6 +37,10 @@
   transform: rotate(-90deg);
   margin: 0;
   background-image: url("/img/2005-desktop@1x.jpg");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  background-image: url("/img/2005-desktop@2x.jpg");
+}
   background-clip: text;
 }
 
@@ -88,26 +92,28 @@
     margin-bottom: 25px;
   }
 
-.about-us__description{
-  max-height: 212px;
-  overflow: hidden;
-  position: relative;
-}
+  .about-us__description--height {
+    overflow: hidden;
+    max-height: 200px;
+  }
 
   .about-us__description p {
     padding-left: 185px;
     margin-bottom: 20px;
-
   }
 
-    .about-us__date p {
-      left: -110px;
-    }
+  .about-us__description p:last-child {
+    margin-bottom: 0;
+  }
+
+  .about-us__date p {
+    left: -110px;
+  }
 
   .about-us button {
     margin-left: 185px;
     margin-bottom: 83px;
-    margin-top: 25px;
+    margin-top: 98px;
   }
 }
 @media (max-width: 767px) {
@@ -125,9 +131,11 @@
     padding: 0;
     margin-bottom: 20px;
   }
-.about-us__description{
-  max-height: 350px;
-}
+
+  .about-us__description--height {
+    max-height: 350px;
+  }
+
   .about-us__description p {
     font-size: 16px;
     line-height: 22px;
@@ -138,5 +146,6 @@
   .about-us button {
     margin-left: 2px;
     margin-bottom: 65px;
+    margin-top: 78px;
   }
 }
