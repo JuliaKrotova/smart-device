@@ -1,25 +1,26 @@
 .advantages__wrapper {
-  max-width: 1411px;
+  max-width: 1170px;
   margin: 0 auto;
   padding: 0 25px;
-  box-sizing: border-box;
 }
 
 .advantages ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  padding: 119px 0 0;
+  padding: 94px 0 0;
 }
 
 .advantages li {
   position: relative;
-  width: 570px;
+  width: 48%;
   margin-right: 30px;
+  flex-grow: 1;
   margin-bottom: 30px;
   border: 1px solid #EBEBEB;
   border-left: 3px solid #00B2FF;
   box-sizing: border-box;
+  min-height: 298px;
 
   &:hover {
     background-color: #00B2FF;
@@ -33,7 +34,7 @@
 }
 
 .advantages li:hover h3,
- .advantages li:hover h3 {
+.advantages li:hover h3 {
   color: #ffffff;
 }
 
@@ -71,34 +72,33 @@
   line-height: 34px;
   color: #00B2FF;
   margin: 0;
-  padding: 98px 45px 15px;
+  padding: 18px 45px 15px;
 }
 
 .advantages p {
-  width: 483px;
   padding-left: 45px;
   padding-right: 42px;
-  padding-bottom: 49px;
+  padding-bottom: 65px;
   margin: 0;
 }
 @media (max-width: 1023px) {
   .advantages ul {
-    padding-top: 54px;
+    padding-top: 38px;
   }
 
   .advantages li {
     width: 345px;
+    min-height: 233px;
   }
 
   .advantages h3 {
-    padding: 70px 27px 20px;
+    padding: 6px 15px 8px 27px;
   }
 
   .advantages p {
-    width: 297px;
     padding-left: 27px;
     padding-right: 21px;
-    padding-bottom: 34px;
+    padding-bottom: 24px;
   }
 
   .advantages__stopwatch svg {
@@ -109,45 +109,48 @@
   .advantages__hired svg {
     width: 31px;
     height: 32px;
-    top: 23;
-    left: 27;
+    padding-top: 23;
+    padding-left: 27;
   }
 
   .advantages__detective svg {
     width: 35px;
     height: 30px;
-    top: 27;
-    left: 27;
+    padding-top: 27;
+    padding-left: 27;
   }
 
   .advantages__tag svg {
     width: 32px;
     height: 32px;
-    top: 24;
-    left: 27;
+    padding-top: 24;
+    padding-left: 27;
   }
 }
 @media (max-width: 767px) {
+  .advantages__wrapper {
+    padding: 0 14px;
+  }
   .advantages ul {
-    padding-top: 37px;
+    padding-top: 7px;
   }
 
   .advantages li {
-    width: 290px;
+    width: 100%;
     margin-bottom: 20px;
+    margin-right: 0;
   }
 
   .advantages h3 {
     font-size: 20px;
     line-height: 28px;
-    padding-top: 74px;
-    padding-bottom: 17px;
+    padding-top: 10px;
+    padding-bottom: 8px;
   }
 
   .advantages p {
-    width: 245px;
     padding-left: 27px;
     padding-right: 18px;
-    padding-bottom: 38px;
+    padding-bottom: 25px;
   }
 }

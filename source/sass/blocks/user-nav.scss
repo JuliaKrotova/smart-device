@@ -1,5 +1,5 @@
 .user-nav {
-  margin-top: 33px;
+  margin-top: 37px;
   flex-grow: 1;
 }
 
@@ -19,7 +19,7 @@
 
 .user-nav__mail {
   position: relative;
-  padding-right: 124px;
+  padding-right: 120px;
 }
 
 .user-nav__mail::before {
@@ -47,7 +47,7 @@
   height: 17px;
   background-image: url("/img/phone-call.svg");
   top: 3;
-  left: -33px;
+  left: -31px;
 }
 
 .user-nav a {
@@ -67,7 +67,8 @@
   font-weight: bold;
   background-color: transparent;
   border: 1px solid #FFFFFF;
-  padding: 14px 33px 13px 32px;
+  padding: 14px 33px 13px 22px;
+  letter-spacing: 0.05em;
 
   &:hover {
     background-color: transparent;
@@ -85,6 +86,10 @@
 }
 
 @media (max-width: 1023px) {
+  .user-nav{
+    margin-top: 32px;
+  }
+
   .user-nav__call,
   .user-nav__mail a,
   .user-nav__phone a {
@@ -100,12 +105,13 @@
   }
 
   .user-nav__mail {
-    padding-right: 60px;
+    padding-right: 35px;
   }
 
   .user-nav__mail::before,
   .user-nav__phone::before {
     background-size: 100% auto;
+    position: initial;
   }
 
   .user-nav__mail::before {
@@ -120,8 +126,12 @@
   }
 }
 @media (max-width: 767px) {
+  .user-nav {
+    margin-top: 23px;
+}
+
   .user-nav__mail {
-    padding-right: 45px;
+    padding-right: 24px;
   }
 
   .page-header__logo p {
