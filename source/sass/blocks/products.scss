@@ -31,6 +31,7 @@
   width: 31%;
   min-height: 620px;
   margin-right: 3%;
+  background-color: #C4C4C4;
 
   &:last-child {
     margin-right: 0;
@@ -89,10 +90,15 @@ min-height: 620px;
 .products button {
     width: 63px;
     height: 63px;
-    background: #00b2ff;
+    background-color: #00b2ff;
     border-radius: 0;
     align-self: flex-end;
     margin-top: auto;
+    background-image: url("/img/vector.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    outline: none;
 }
 
 @media (max-width: 1023px) {
