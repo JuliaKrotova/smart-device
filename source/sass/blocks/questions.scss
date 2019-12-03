@@ -3,6 +3,14 @@
   color: #ffffff;
 }
 
+.questions__background--wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+  background-image: url("/img/airplane-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: 0 160px;
+}
+
 .questions__wrapper {
   padding-left: 50%;
   padding-right: 25px;
@@ -11,12 +19,12 @@
 
 .questions h2 {
   font-family: "Roboto Condensed", "Arial", sans-serif;
-font-weight: normal;
-font-size: 36px;
-line-height: 51px;
-margin: 0;
-padding-top: 96px;
-padding-bottom: 7px;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  margin: 0;
+  padding-top: 96px;
+  padding-bottom: 7px;
 }
 
 .questions p {
@@ -31,7 +39,6 @@ textarea::placeholder {
   font-size: 16px;
   line-height: 22px;
 }
-
 
 .form__row--input {
   display: flex;
@@ -66,9 +73,58 @@ textarea::placeholder {
   resize: none;
 }
 
+.form__row--submit button {
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding-top: 14px;
+  padding-bottom: 13px;
+  letter-spacing: 0.05em;
+  width: 47%;
+  margin-bottom: 119px;
+}
+
+.form__row--submit {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__row--submit label {
+  position: relative;
+  width: 40%;
+}
+
+.form__row--submit input + label::before,
+.form__row--submit input:checked + label::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.form__row--submit input + label::before {
+  width: 16px;
+  height: 16px;
+  left: -32;
+  top: 3px;
+  border: 1px solid #FFFFFF;
+}
+
+.form__row--submit input:checked + label::after {
+  width: 7px;
+  height: 7px;
+  left: -26px;
+  top: 9px;
+  background-image: url("/img/checkbox-on.svg");
+}
+
 @media (max-width: 1023px) {
+  .questions__background--wrapper {
+    background-image: none;
+  }
+
   .questions__wrapper {
-    max-width: 590px;
+    max-width: 100%;
     padding-left: 63px;
     padding-right: 40px;
     margin: 0 auto;
@@ -76,8 +132,8 @@ textarea::placeholder {
 
   .questions h2 {
     font-size: 32px;
-line-height: 45px;
-padding-top: 83px;
+    line-height: 45px;
+    padding-top: 83px;
   }
 
   .form input,
@@ -85,23 +141,55 @@ padding-top: 83px;
     padding-top: 14px;
   }
 
-  .form input {
-  }
+  .form input {}
 
   .form textarea {
     height: 148px;
   }
+
+  .form__row--submit button {
+    padding-top: 15px;
+    padding-bottom: 14px;
+    margin-bottom: 103px;
+  }
 }
+
 @media (max-width: 767px) {
   .questions__wrapper {
+    max-width: 1170px;
     padding-left: 15px;
     padding-right: 15px;
   }
 
   .questions h2 {
     font-size: 28px;
-line-height: 39px;
-padding-top: 33px;
-width: 243px;
+    line-height: 39px;
+    padding-top: 33px;
+    width: 243px;
+  }
+
+  .form__row--submit {
+    flex-direction: column;
+  }
+
+  .form__row--submit button {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .form__row--submit label {
+    width: 240px;
+    margin-bottom: 41px;
+    padding-left: 35px;
+  }
+
+  .form__row--submit input + label::before {
+    left: 0;
+    top: 3px;
+  }
+
+  .form__row--submit input:checked + label::after {
+    left: 5;
+    top: 9px;
   }
 }
