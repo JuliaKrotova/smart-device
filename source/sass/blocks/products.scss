@@ -10,7 +10,7 @@
 
 .products h2 {
   padding-top: 93px;
-  padding-bottom: 47px;
+  padding-bottom: 22px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: normal;
   font-size: 36px;
@@ -31,7 +31,8 @@
   width: 31%;
   min-height: 620px;
   margin-right: 3%;
-  background-color: #C4C4C4;
+  background-color: #1B2D37;
+  position: relative;
 
   &:last-child {
     margin-right: 0;
@@ -42,6 +43,16 @@
 display: flex;
 flex-direction: column;
 min-height: 620px;
+cursor: pointer;
+
+&:hover {
+  opacity: 0.7;
+}
+
+&:active,
+&:focus {
+  opacity: 0.5;
+}
 }
 
 .products h3 {
@@ -50,37 +61,44 @@ min-height: 620px;
   font-size: 20px;
   line-height: 30px;
   color: #FFFFFF;
-  padding-left: 35px;
-  padding-top: 45px;
-  padding-right: 35px;
-  padding-bottom: 50px;
+  padding: 30px 45px 50px;
   width: 190px;
+  z-index: 1;
 }
 
-.products__production {
-  background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url("/img/production-desktop@1x.jpg");
+.products__production a::before,
+.products__installation a::before,
+.products__components a::before{
+
+  content: "";
   background-repeat: no-repeat;
   background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0.2;
+}
+
+.products__production a::before{
+  background-image: url("/img/production-desktop@1x.jpg");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-  background-image: url("/img/production-desktop@2x.jpg");
-}
+    background-image: url("/img/production-desktop@2x.jpg");
+  }
 }
 
-.products__installation {
-  background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url("/img/installation-desktop@1x.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+.products__installation a::before{
+  background-image: url("/img/installation-desktop@1x.jpg");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
   background-image: url("/img/installation-desktop@2x.jpg");
 }
 }
 
-.products__components {
+.products__components a::before{
   background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url("/img/components-desktop@1x.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
   background-image: url("/img/components-desktop@2x.jpg");
@@ -108,10 +126,10 @@ min-height: 620px;
   }
 
   .products h2 {
-    padding-top: 53px;
+    padding-top: 50px;
     font-size: 32px;
     line-height: 45px;
-    padding-bottom: 46px;
+    padding-bottom: 25px;
     width: 630px;
   }
 
@@ -136,7 +154,7 @@ min-height: 620px;
   }
 
   .products h3 {
-    padding-top: 43px;
+    padding-top: 25px;
     padding-left: 43px;
     padding-right: 43px;
   }
@@ -151,7 +169,8 @@ min-height: 620px;
   .products h2 {
     font-size: 28px;
     line-height: 39px;
-    padding-bottom: 37px;
+    padding-bottom: 15px;
+    width: 280px;
   }
 
   .products li {
@@ -160,8 +179,12 @@ min-height: 620px;
   }
 
   .products h3 {
-    padding-top: 23px;
+    padding-top: 3px;
     padding-left: 35px;
     padding-right: 35px;
   }
+
+  .products ul {
+    padding-bottom: 65px;
+}
 }

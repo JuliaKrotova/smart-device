@@ -33,6 +33,12 @@
 @import "blocks/about-us.scss";
 @import "blocks/products.scss";
 @import "blocks/questions.scss";
+@import "blocks/modal.scss";
+
+html,
+body {
+	height: 100%;
+}
 
 body {
   font-family: "PT Mono", "Arial", sans-serif;
@@ -43,8 +49,23 @@ body {
   width: 100%;
 }
 
+.page__wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.page__content {
+	flex: 1 0 auto;
+}
+
+footer {
+	flex: 0 0 auto;
+}
+
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 img {
@@ -75,5 +96,31 @@ img {
   &:focus {
     background-color: #6bbfef;
     color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.body__wrapper {
+
+}
+
+.page-main{
+  background: url("/img/triangle1-desktop@1x.png"),url("/img/triangle2-desktop@1x.png"),url("/img/triangle3-desktop@1x.png"),url("/img/triangle4-desktop@1x.png");
+  background-position: left 430px, 200px 30px, 54% 135px, top 380px right 10px;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 1023px) {
+  .page-main{
+    background: url("/img/triangle-tablet@1x.png");
+    background-position: right 75px;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-main{
+    background: url("/img/triangle-mobile@1x.png");
+    background-position: right 635px;
+    background-repeat: no-repeat;
   }
 }

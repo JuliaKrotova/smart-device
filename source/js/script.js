@@ -8,6 +8,15 @@ document.addEventListener('DOMContentLoaded', function() {
   var description = document.querySelector('.about-us__description');
   var aboutUsToggle = document.querySelector('.about-us__button');
 
+  var questionsForm = document.querySelector('.questions form');
+  var isStorageSupport = true;
+  var nameField = document.querySelector('.questions input[name=name]');
+  var phoneField = document.querySelector('.questions input[name=phone]');
+  var questionField = document.querySelector('.questions textarea[name=question]');
+  var name = "";
+  var phone = "";
+  var question = "";
+
   sectionsToggle.addEventListener('click', function() {
     var parent = this.closest('.page-footer__sections');
     if (parent.classList.contains('page-footer__sections--close')) {
@@ -58,4 +67,33 @@ document.addEventListener('DOMContentLoaded', function() {
     description.innerHTML = clone.innerHTML;
     clone.remove();
   }
+
+  //form data
+  try {
+    name = localStorage.getItem("name");
+    phone = localStorage.getItem("phone");
+    question = localStorage.getItem("question");
+  } catch (err) {
+    isStorageSupport = false;
+  }
+
+  if(name){
+    nameField.value = name;
+  }
+  if(phone){
+    phoneField.value = phone;
+  }
+  if(question){
+    questionField.value = question;
+  }
+
+  questionsForm.addEventListener("submit", function(evt) {
+    if (isStorageSupport) {
+        localStorage.setItem("phone", phoneField.value);
+        localStorage.setItem("name", nameField.value);
+        localStorage.setItem("question", questionField.value);
+        debugger;
+      }
+  });
+
 });

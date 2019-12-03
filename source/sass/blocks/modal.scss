@@ -1,0 +1,114 @@
+.modal {
+  position: fixed;
+  display: none;
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -245px;
+  z-index: 1;
+}
+
+.modal-feedback.modal-open {
+  display: block;
+}
+
+.modal .questions__wrapper {
+  background-color: #00B2FF;
+  color: #ffffff;
+  max-width: 490px;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+.modal h2 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: normal;
+  margin: 0;
+  padding-top: 33px;
+  padding-bottom: 7px;
+  font-size: 28px;
+  line-height: 39px;
+}
+
+.modal .questions p {
+  margin: 0;
+  padding-bottom: 55px;
+}
+
+.modal .form {
+  padding: 0;
+}
+
+.modal  .form__row--submit {
+  flex-direction: column;
+}
+
+.modal .form__row--submit button {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.modal .form__row--input {
+  width: 100%;
+  flex-direction: column;
+}
+
+.modal .form__row--input input {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.modal textarea {
+  margin-bottom: 30px;
+  height: 104px;
+}
+
+.modal .form__row--submit label {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 41px;
+  padding-left: 48px;
+}
+
+.modal .form__row--submit input + label::before {
+  left: 0;
+  top: 3px;
+}
+
+.modal .form__row--submit input:checked + label::after {
+  left: 5;
+  top: 9px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 17px;
+  height: 17px;
+  font-size: 0;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 19px;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}

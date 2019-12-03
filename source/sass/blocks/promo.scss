@@ -17,6 +17,7 @@
   margin: 0 auto;
   padding: 0 25px;
   background-image: url("/img/triangles-desktop@1x.png");
+
   background-position: right -225px top -257px;
   background-repeat: no-repeat;
   padding-top: 55px;
@@ -147,11 +148,20 @@
     margin-right: 15px;
     margin-bottom: 0;
     width: 100%;
+    padding-left: 55px;
+    padding-right: 15px;
+    box-sizing: border-box;
   }
 
   .promo p::before {
-    display: none;
-  }
+      position: absolute;
+      content: "";
+      width: 33px;
+      height: 2px;
+      background-color: #fff;
+      top: 13;
+      left: 0;
+    }
 
   .promo button {
     visibility: hidden;
