@@ -14,8 +14,7 @@
 .advantages li {
   position: relative;
   width: 48%;
-  margin-right: 30px;
-  flex-grow: 1;
+  margin-right: 4%;
   margin-bottom: 30px;
   border: 1px solid #EBEBEB;
   border-left: 3px solid #00B2FF;
@@ -40,6 +39,7 @@
 }
 
 .advantages svg {
+  position: absolute;
   fill: #00B2FF;
 }
 
@@ -73,7 +73,7 @@
   line-height: 34px;
   color: #00B2FF;
   margin: 0;
-  padding: 18px 45px 15px;
+  padding: 95px 45px 15px;
 }
 
 .advantages p {
@@ -82,18 +82,18 @@
   padding-bottom: 65px;
   margin: 0;
 }
+
 @media (max-width: 1023px) {
   .advantages ul {
     padding-top: 38px;
   }
 
   .advantages li {
-    width: 345px;
     min-height: 233px;
   }
 
   .advantages h3 {
-    padding: 6px 15px 8px 27px;
+    padding: 64px 15px 8px 27px;
   }
 
   .advantages p {
@@ -110,24 +110,25 @@
   .advantages__hired svg {
     width: 31px;
     height: 32px;
-    padding-top: 23;
-    padding-left: 27;
+    padding-top: 23px;
+    padding-left: 27px;
   }
 
   .advantages__detective svg {
     width: 35px;
     height: 30px;
-    padding-top: 27;
-    padding-left: 27;
+    padding-top: 24px;
+    padding-left: 22px;
   }
 
   .advantages__tag svg {
     width: 32px;
     height: 32px;
-    padding-top: 24;
-    padding-left: 27;
+    padding-top: 24px;
+    padding-left: 27px;
   }
 }
+
 @media (max-width: 767px) {
   .advantages__wrapper {
     padding: 0 14px;
@@ -146,7 +147,7 @@
   .advantages h3 {
     font-size: 20px;
     line-height: 28px;
-    padding-top: 10px;
+    padding-top: 71px;
     padding-bottom: 8px;
   }
 

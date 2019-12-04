@@ -9,8 +9,9 @@
 }
 
 .products h2 {
-  padding-top: 93px;
-  padding-bottom: 22px;
+  margin: 0;
+  padding-top: 87px;
+  padding-bottom: 33px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: normal;
   font-size: 36px;
@@ -23,8 +24,7 @@
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
-  padding: 0;
-  padding-bottom: 127px;
+  padding: 0 0 127px;
 }
 
 .products li {
@@ -34,25 +34,25 @@
   background-color: #1B2D37;
   position: relative;
 
-  &:last-child {
+  &:nth-child(3n) {
     margin-right: 0;
   }
 }
 
 .products a {
-display: flex;
-flex-direction: column;
-min-height: 620px;
-cursor: pointer;
+  display: block;
+  position: relative;
+  min-height: 620px;
+  cursor: pointer;
 
-&:hover {
-  opacity: 0.7;
-}
+  &:hover {
+    opacity: 0.7;
+  }
 
-&:active,
-&:focus {
-  opacity: 0.5;
-}
+  &:active,
+  &:focus {
+    opacity: 0.5;
+  }
 }
 
 .products h3 {
@@ -61,18 +61,18 @@ cursor: pointer;
   font-size: 20px;
   line-height: 30px;
   color: #FFFFFF;
-  padding: 30px 45px 50px;
+  padding: 50px 45px;
   width: 190px;
   z-index: 1;
 }
 
-.products__production a::before,
+.products__components a::before,
 .products__installation a::before,
-.products__components a::before{
-
+.products__production a::before {
   content: "";
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #1B2D40;
   position: absolute;
   top: 0;
   right: 0;
@@ -81,68 +81,66 @@ cursor: pointer;
   opacity: 0.2;
 }
 
-.products__production a::before{
+.products__production a::before {
   background-image: url("/img/production-desktop@1x.jpg");
-
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("/img/production-desktop@2x.jpg");
   }
 }
 
-.products__installation a::before{
+.products__installation a::before {
   background-image: url("/img/installation-desktop@1x.jpg");
-
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-  background-image: url("/img/installation-desktop@2x.jpg");
-}
+    background-image: url("/img/installation-desktop@2x.jpg");
+  }
 }
 
-.products__components a::before{
+.products__components a::before {
   background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url("/img/components-desktop@1x.jpg");
-
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-  background-image: url("/img/components-desktop@2x.jpg");
-}
+    background-image: url("/img/components-desktop@2x.jpg");
+  }
 }
 
 .products button {
-    width: 63px;
-    height: 63px;
-    background-color: #00b2ff;
-    border-radius: 0;
-    align-self: flex-end;
-    margin-top: auto;
-    background-image: url("/img/vector.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    border: none;
-    outline: none;
+  width: 63px;
+  height: 63px;
+  background-color: #00b2ff;
+  border-radius: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-image: url("/img/vector.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  outline: none;
 }
 
 @media (max-width: 1023px) {
   .products__wrapper {
-    padding-left: 31px;
+    padding-left: 25px;
     padding-right: 24px;
   }
 
   .products h2 {
-    padding-top: 50px;
+    padding-top: 53px;
     font-size: 32px;
     line-height: 45px;
-    padding-bottom: 25px;
+    padding-bottom: 30px;
     width: 630px;
   }
 
   .products ul {
     flex-direction: column;
-    padding-bottom: 78px;
+    padding-bottom: 73px;
   }
 
   .products li {
     width: 100%;
     min-height: 256px;
     margin-right: 0;
-    margin-bottom: 46px;
+    margin-bottom: 27px;
 
     &:last-child {
       margin-bottom: 0;
@@ -150,12 +148,12 @@ cursor: pointer;
   }
 
   .products a {
-  min-height: 256px;
+    min-height: 256px;
   }
 
   .products h3 {
-    padding-top: 25px;
-    padding-left: 43px;
+    padding-top: 41px;
+    padding-left: 44px;
     padding-right: 43px;
   }
 }
@@ -169,22 +167,25 @@ cursor: pointer;
   .products h2 {
     font-size: 28px;
     line-height: 39px;
+    padding-left: 10px;
     padding-bottom: 15px;
     width: 280px;
+    padding-bottom: 19px;
+    margin-bottom: 0;
   }
 
   .products li {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 
   .products h3 {
-    padding-top: 3px;
+    padding-top: 25px;
     padding-left: 35px;
     padding-right: 35px;
   }
 
   .products ul {
     padding-bottom: 65px;
-}
+  }
 }

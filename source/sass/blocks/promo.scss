@@ -15,8 +15,7 @@
   position: relative;
   max-width: 1411px;
   margin: 0 auto;
-  padding: 0 25px;
-  padding-top: 55px;
+  padding: 55px 25px 0;
 }
 
 .promo h2 {
@@ -62,6 +61,7 @@
   margin-bottom: 275px;
   margin-top: 12px;
 }
+
 @media (max-width: 1023px) {
   .promo {
     top: 78px;
@@ -102,10 +102,11 @@
   }
 
   .promo__image {
-  top: -78px;
-  right: 0;
+    top: -78px;
+    right: 0;
+  }
 }
-}
+
 @media (max-width: 767px) {
   .promo {
     top: 68px;
@@ -117,8 +118,7 @@
   }
 
   .promo__wrapper {
-    padding: 0;
-    padding-top: 215px;
+    padding: 215px 0 0;
   }
 
   .promo__wrapper h2 {
@@ -143,14 +143,14 @@
   }
 
   .promo p::before {
-      position: absolute;
-      content: "";
-      width: 33px;
-      height: 2px;
-      background-color: #fff;
-      top: 13;
-      left: 0;
-    }
+    position: absolute;
+    content: "";
+    width: 33px;
+    height: 2px;
+    background-color: #fff;
+    top: 13;
+    left: 0;
+  }
 
   .promo button {
     visibility: hidden;

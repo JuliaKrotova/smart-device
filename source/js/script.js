@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var feedbackButton = document.querySelector('.user-nav__call button');
   var modalFeedback = document.querySelector('.modal-backdrop');
   var modalClose = document.querySelector('.modal-close');
+  var modalNameInput = document.querySelector('.modal input[name=name]');
 
   sectionsToggle.addEventListener('click', function() {
     var parent = this.closest('.page-footer__sections');
@@ -40,8 +41,10 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   aboutUsToggle.addEventListener('click', function() {
-    description.classList.remove('about-us__description--height');
-    description.innerHTML = allHtml;
+    if (window.innerWidth < 1024) {
+      description.classList.remove('about-us__description--height');
+      description.innerHTML = allHtml;
+    }
   });
 
   //clip text ----------------------------------
@@ -102,6 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
   //modal
   feedbackButton.addEventListener("click", function(evt) {
     modalFeedback.classList.add("modal-open");
+    modalNameInput.focus();
   });
   modalClose.addEventListener("click", function(evt) {
     modalFeedback.classList.remove("modal-open");

@@ -19,39 +19,22 @@
 
 .user-nav__mail {
   position: relative;
-  padding-right: 120px;
+  padding-right: 95px;
 }
 
-.user-nav__mail::before {
-  position: absolute;
-  content: "";
-  display: block;
-  width: 19px;
-  height: 14px;
-  background-image: url("/img/envelope.svg");
-  top: 3;
-  left: -40px;
+.user-nav__mail svg {
+  margin-right: 10px;
 }
 
 .user-nav__phone {
-  position: relative;
   padding-right: 50px;
   white-space: nowrap;
 }
 
-.user-nav__phone::before {
-  position: absolute;
-  content: "";
-  display: block;
-  width: 17px;
-  height: 17px;
-  background-image: url("/img/phone-call.svg");
-  top: 3;
-  left: -31px;
-}
-
 .user-nav a {
   color: #ffffff;
+  position: relative;
+  z-index: 1;
 
   &:hover {
     color: rgba(255, 255, 255, 0.5);
@@ -61,6 +44,15 @@
   &:focus {
     color: rgba(255, 255, 255, 0.3);
   }
+}
+
+.user-nav svg {
+  fill: #00B2FF;
+}
+
+.user-nav a:focus svg,
+.user-nav a:hover svg {
+  fill: rgba(255, 255, 255, 0.5);
 }
 
 .user-nav .user-nav__button {
@@ -86,13 +78,13 @@
 }
 
 @media (max-width: 1023px) {
-  .user-nav{
+  .user-nav {
     margin-top: 32px;
   }
 
   .user-nav__call,
-  .user-nav__mail a,
-  .user-nav__phone a {
+  .user-nav__mail span,
+  .user-nav__phone span {
     display: none;
   }
 
@@ -107,34 +99,24 @@
   .user-nav__mail {
     padding-right: 35px;
   }
-
-  .user-nav__mail::before,
-  .user-nav__phone::before {
-    background-size: 100% auto;
-    position: initial;
-  }
-
-  .user-nav__mail::before {
-    width: 25.33px;
-    height: 18.67px;
-  }
-
-  .user-nav__phone::before {
-    width: 24px;
-    height: 24px;
-    top: 0;
-  }
 }
+
 @media (max-width: 767px) {
   .user-nav {
     margin-top: 23px;
-}
-
-  .user-nav__mail {
-    padding-right: 24px;
   }
 
-  .page-header__logo p {
-    display: none;
+  .user-nav__mail {
+    padding-right: 13px;
+  }
+
+  .user-nav__mail svg {
+    width: 26px;
+    height: 18px;
+  }
+
+  .user-nav__phone svg {
+    width: 24px;
+    height: 24px;
   }
 }

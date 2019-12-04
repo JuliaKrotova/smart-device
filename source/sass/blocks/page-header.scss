@@ -2,8 +2,9 @@
   background-color: #1B2D37;
   background-image: url("/img/background-desktop@1x.png");
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-  background-image: url("/img/background-desktop@2x.png");
-}
+    background-image: url("/img/background-desktop@2x.png");
+    background-size: 1920px auto;
+  }
   color: #FFFFFF;
 }
 
@@ -11,7 +12,7 @@
   max-width: 1411px;
   margin: 0 auto;
   display: flex;
-  padding: 0 25px 772px;
+  padding: 0 25px 777px;
 }
 
 .page-header__container {
@@ -46,6 +47,7 @@
   margin: 0;
   white-space: nowrap;
 }
+
 @media (max-width: 1023px) {
   .page-header__container {
     margin-top: 20px;
@@ -55,13 +57,17 @@
     padding-bottom: 610px;
   }
 }
-@media (max-width: 767px) {
 
+@media (max-width: 767px) {
   .page-header__container {
     margin-top: 17px;
   }
 
   .page-header__wrapper {
-    padding: 0 15px 580px;
+    padding: 0 15px 573px;
+  }
+
+  .page-header__logo p {
+    display: none;
   }
 }

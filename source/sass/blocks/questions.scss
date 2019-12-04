@@ -1,11 +1,8 @@
 .questions {
-  background-image: url("/img/questions-triangle3-desktop@1x.png"),
-    url("/img/questions-triangle4-desktop@1x.png"),
-    linear-gradient(to right, rgb(0, 178, 255), rgb(0, 178, 255));
+  background-color: #00B2FF;
+  background-image: url("/img/background-triangle1.svg"), url("/img/background-triangle2.svg"), linear-gradient(to right, rgb(0, 178, 255), rgb(0, 178, 255));
   background-repeat: no-repeat;
-  background-position: right 12px top 15px,
-    right 0px top 260px,
-    top left;
+  background-position: right 15px top 42px,right 0 top 285px,top left;
   color: #ffffff;
 }
 
@@ -16,20 +13,19 @@
 }
 
 .questions__background--wrapper::before {
-position: absolute;
-left: -190px;
-right: 0px;
-height: 100%;
-top: 0;
-content: "";
-background-image: url("/img/airplane-desktop@1x.png");
-
-@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-background-image: url("/img/airplane-desktop@2x.png");
-}
-
-background-repeat: no-repeat;
-background-position: 24px -59px;
+  position: absolute;
+  left: -190px;
+  right: 0;
+  height: 100%;
+  top: 0;
+  content: "";
+  background-image: url("/img/airplane@1x.png");
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("/img/airplane@2x.png");
+    background-size: 686px auto;
+  }
+  background-repeat: no-repeat;
+  background-position: 24px -59px;
 }
 
 .questions__wrapper {
@@ -69,7 +65,7 @@ textarea::placeholder {
   justify-content: space-between;
 }
 
-.form{
+.form {
   padding: 0 10px;
 }
 
@@ -83,6 +79,16 @@ textarea::placeholder {
   box-sizing: border-box;
   padding-top: 16px;
   padding-bottom: 14px;
+
+  &:hover {
+    background-color: #71c3f2;
+  }
+
+  &:active,
+  &:focus {
+    background-color: #6bbfef;
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .form input {
@@ -148,11 +154,12 @@ textarea::placeholder {
 }
 
 @media (max-width: 1023px) {
-  .questions{
+  .questions {
     background-color: #00B2FF;
   }
 
-  .questions, .questions__wrapper {
+  .questions,
+  .questions__wrapper {
     background-image: none;
   }
 
@@ -173,9 +180,9 @@ textarea::placeholder {
     padding-top: 83px;
   }
 
-    .questions p {
-      padding-bottom: 60px;
-    }
+  .questions p {
+    padding-bottom: 60px;
+  }
 
   .form input,
   .form textarea {
@@ -194,14 +201,14 @@ textarea::placeholder {
 
   .form__row--submit label {
     padding-top: 7px;
- }
+  }
 
-.form__row--submit input+label::before {
+  .form__row--submit input+label::before {
     left: -36px;
     top: 13px;
- }
+  }
 
-.form__row--submit input:checked+label::after {
+  .form__row--submit input:checked+label::after {
     left: -31px;
     top: 19px;
   }
@@ -223,7 +230,7 @@ textarea::placeholder {
 
   .questions p {
     padding-bottom: 30px;
-}
+  }
 
   .questions .form {
     padding: 0 5px;
@@ -275,5 +282,5 @@ textarea::placeholder {
 
   .form__row--submit label {
     padding-top: 0;
-}
+  }
 }
