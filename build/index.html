@@ -60,13 +60,12 @@
     <div class="page-header__wrapper">
       <div class="page-header__container logo">
         <a class="page-header__logo logo__link">
-          <svg width="52" height="52">
-            <use xlink:href="#icon-circuit"></use>
-          </svg>
-          <div>
-            <p class="page-header__logo-name logo__name">Smart Device</p>
-            <p class="page-header__logo-description logo__description">умные технологии</p>
-          </div>
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)" srcset="">
+            <source type="image/webp" srcset="">
+            <source media="(max-width: 767px)" srcset="img/logo-mobile@1x.png 1x, img/logo-mobile@2x.png 2x">
+            <img class="page-header__logo-image" src="img/logo-desktop@1x.png" srcset="img/logo-desktop@2x.png 2x" alt="Логотип">
+          </picture>
         </a>
       </div>
       <nav class="user-nav">
@@ -207,13 +206,10 @@
           <div class="page-footer__container">
             <div class="page-footer__container-logo logo">
               <a class="page-footer__logo logo__link">
-                <svg width="52" height="52">
-                  <use xlink:href="#icon-circuit"></use>
-                </svg>
-                <div>
-                  <p class="page-footer__logo-name logo__name">Smart Device</p>
-                  <p class="page-footer__logo-description logo__description">умные технологии</p>
-                </div>
+                <picture>
+                  <source type="image/webp" srcset="">
+                  <img class="page-header__logo-image" src="img/logo-footer-desktop@1x.png" srcset="img/logo-footer-desktop@2x.png 2x" alt="Логотип">
+                </picture>
               </a>
             </div>
             <div class="page-footer__social social">
