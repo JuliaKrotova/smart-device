@@ -7,8 +7,8 @@
 
 .promo__image {
   position: absolute;
-  top: -8px;
-  right: -53px;
+  top: -142px;
+  right: -59px;
 }
 
 .promo__wrapper {
@@ -16,10 +16,6 @@
   max-width: 1411px;
   margin: 0 auto;
   padding: 0 25px;
-  background-image: url("/img/triangles-desktop@1x.png");
-
-  background-position: right -225px top -257px;
-  background-repeat: no-repeat;
   padding-top: 55px;
 }
 
@@ -72,9 +68,6 @@
   }
 
   .promo__wrapper {
-    background-image: url("/img/triangles-tablet@1x.png");
-    background-repeat: no-repeat;
-    background-position: right -80px;
     padding-top: 110px;
   }
 
@@ -109,7 +102,7 @@
   }
 
   .promo__image {
-  top: 33px;
+  top: -78px;
   right: 0;
 }
 }
@@ -120,15 +113,11 @@
 
   .promo__image {
     position: absolute;
-    top: 23px;
-    left: 26;
+    top: -68px;
   }
 
   .promo__wrapper {
     padding: 0;
-    background-image: url("/img/triangles-mobile@1x.png");
-    background-repeat: no-repeat;
-    background-position: right -67px;
     padding-top: 215px;
   }
 

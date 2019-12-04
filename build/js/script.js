@@ -17,6 +17,10 @@ document.addEventListener('DOMContentLoaded', function() {
   var phone = "";
   var question = "";
 
+  var feedbackButton = document.querySelector('.user-nav__call button');
+  var modalFeedback = document.querySelector('.modal-backdrop');
+  var modalClose = document.querySelector('.modal-close');
+
   sectionsToggle.addEventListener('click', function() {
     var parent = this.closest('.page-footer__sections');
     if (parent.classList.contains('page-footer__sections--close')) {
@@ -92,8 +96,25 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem("phone", phoneField.value);
         localStorage.setItem("name", nameField.value);
         localStorage.setItem("question", questionField.value);
-        debugger;
       }
   });
+
+  //modal
+  feedbackButton.addEventListener("click", function(evt) {
+    modalFeedback.classList.add("modal-open");
+  });
+  modalClose.addEventListener("click", function(evt) {
+    modalFeedback.classList.remove("modal-open");
+  });
+  modalFeedback.addEventListener("click", function(evt) {
+    if(evt.target.classList.contains('modal-backdrop'))
+    modalFeedback.classList.remove("modal-open");
+  });
+  window.addEventListener("keydown", function(evt) {
+  if (evt.keyCode === 27) {
+    evt.preventDefault();
+    modalFeedback.classList.remove("modal-open");
+  }
+});
 
 });
