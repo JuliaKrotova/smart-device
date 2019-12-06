@@ -2,8 +2,11 @@
 
 document.addEventListener('DOMContentLoaded', function() {
   //event handlers -----------------------------
+  var body = document.querySelector('body');
   var sectionsToggle = document.querySelector('.page-footer__sections-container button');
   var addressToggle = document.querySelector('.page-footer__address-container button');
+  var sections = document.querySelector('.page-footer__sections');
+  var address= document.querySelector('.page-footer__address');
 
   var description = document.querySelector('.about-us__description');
   var aboutUsToggle = document.querySelector('.about-us__button');
@@ -23,22 +26,40 @@ document.addEventListener('DOMContentLoaded', function() {
   var modalNameInput = document.querySelector('.modal input[name=name]');
 
   sectionsToggle.addEventListener('click', function() {
-    var parent = this.closest('.page-footer__sections');
-    if (parent.classList.contains('page-footer__sections--close')) {
-      parent.classList.remove('page-footer__sections--close');
+    if (sections.classList.contains('page-footer__sections--close')) {
+      sections.classList.remove('page-footer__sections--close');
+      address.classList.add('page-footer__address--close');
     } else {
-      parent.classList.add('page-footer__sections--close');
+      sections.classList.add('page-footer__sections--close');
     }
   });
 
   addressToggle.addEventListener('click', function() {
-    var parent = this.closest('.page-footer__address');
-    if (parent.classList.contains('page-footer__address--close')) {
-      parent.classList.remove('page-footer__address--close');
+    if (address.classList.contains('page-footer__address--close')) {
+      address.classList.remove('page-footer__address--close');
+      sections.classList.add('page-footer__sections--close');
     } else {
-      parent.classList.add('page-footer__address--close');
+      address.classList.add('page-footer__address--close');
     }
   });
+
+  document.addEventListener('click', function(evt){
+    var target = evt.target;
+    if(target.tagName.toLowerCase() === "a"){
+
+    var id  = target.getAttribute("href");
+    if(id.startsWith("#")){
+      evt.preventDefault();
+      var scrollTarget = document.querySelector(id);
+      var offsetTop = scrollTarget.offsetTop;
+      window.scrollTo({
+    top: offsetTop,
+    behavior: "smooth"
+});
+    }
+    }
+  })
+
 
   aboutUsToggle.addEventListener('click', function() {
     if (window.innerWidth < 1024) {
@@ -103,23 +124,37 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   //modal
+
   feedbackButton.addEventListener("click", function(evt) {
     modalFeedback.classList.add("modal-open");
     modalNameInput.focus();
+    body.classList.add('no-scroll');
   });
   modalClose.addEventListener("click", function(evt) {
     modalFeedback.classList.remove("modal-open");
+    body.classList.remove('no-scroll');
   });
   modalFeedback.addEventListener("click", function(evt) {
     if(evt.target.classList.contains('modal-backdrop')){
       modalFeedback.classList.remove("modal-open");
+      body.classList.remove('no-scroll');
     }
   });
   window.addEventListener("keydown", function(evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
     modalFeedback.classList.remove("modal-open");
+    body.classList.remove('no-scroll');
   }
 });
-
 });
+
+var phoneMask = IMask(
+  document.getElementById('phone-mask'), {
+    mask: '+{7}(000)000-00-00'
+  });
+
+  var modalPhoneMask = IMask(
+    document.getElementById('modal-phone-mask'), {
+      mask: '+{7}(000)000-00-00'
+    });

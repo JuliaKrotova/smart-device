@@ -26,6 +26,10 @@
   margin-right: 10px;
 }
 
+.user-nav__phone svg {
+  margin-right: 5px;
+}
+
 .user-nav__phone {
   padding-right: 50px;
   white-space: nowrap;
@@ -61,20 +65,6 @@
   border: 1px solid #FFFFFF;
   padding: 14px 33px 13px 22px;
   letter-spacing: 0.05em;
-
-  &:hover {
-    background-color: transparent;
-    color: rgba(255, 255, 255, 0.5);
-    border-color: rgba(255, 255, 255, 0.5);
-  }
-
-  &:active,
-  &:focus {
-    background-color: transparent;
-    color: rgba(255, 255, 255, 0.3);
-    border-color: rgba(255, 255, 255, 0.3);
-    outline: none;
-  }
 }
 
 @media (max-width: 1023px) {
@@ -99,6 +89,17 @@
   .user-nav__mail {
     padding-right: 35px;
   }
+
+  .user-nav__mail svg {
+    margin-right: 0;
+    width: 25px;
+    height: 18px;
+  }
+
+  .user-nav__phone svg {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -113,10 +114,6 @@
   .user-nav__mail svg {
     width: 26px;
     height: 18px;
-  }
-
-  .user-nav__phone svg {
-    width: 24px;
-    height: 24px;
+    margin-right: 4px;
   }
 }

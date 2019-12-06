@@ -1,36 +1,34 @@
 .questions {
-  background-color: #00B2FF;
-  background-image: url("/img/background-triangle1.svg"), url("/img/background-triangle2.svg"), linear-gradient(to right, rgb(0, 178, 255), rgb(0, 178, 255));
+  background: url("/img/airplane@1x.png") no-repeat 15% 61px,#00b2ff;
   background-repeat: no-repeat;
-  background-position: right 15px top 42px,right 0 top 285px,top left;
   color: #ffffff;
+}
+@media (max-width: 1700px) {
+  .questions {
+    background: url("/img/airplane@1x.png") no-repeat -20px 61px,#00b2ff;
+  }
+}
+@media (max-width: 1450px) {
+  .questions {
+    background: url("/img/airplane@1x.png") no-repeat -130px 61px,#00b2ff;
+  }
+}
+@media (max-width: 1200px) {
+  .questions {
+    background: url("/img/airplane@1x.png") no-repeat -300px 61px,#00b2ff;
+  }
 }
 
 .questions__background--wrapper {
+  display: flex;
+  flex-direction: row-reverse;
   max-width: 1240px;
   margin: 0 auto;
   position: relative;
 }
 
-.questions__background--wrapper::before {
-  position: absolute;
-  left: -190px;
-  right: 0;
-  height: 100%;
-  top: 0;
-  content: "";
-  background-image: url("/img/airplane@1x.png");
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("/img/airplane@2x.png");
-    background-size: 686px auto;
-  }
-  background-repeat: no-repeat;
-  background-position: 24px -59px;
-}
-
 .questions__wrapper {
   position: relative;
-  padding-left: 50%;
   padding-right: 25px;
   max-width: 600px;
 }
@@ -42,8 +40,8 @@
   line-height: 51px;
   margin: 0;
   padding-top: 90px;
-  padding-bottom: 7px;
-  padding-left: 10px;
+  padding-bottom: 12px;
+  padding-left: 14px;
 }
 
 .questions p {
@@ -66,7 +64,8 @@ textarea::placeholder {
 }
 
 .form {
-  padding: 0 10px;
+  padding: 0 10px 94px 18px;
+  margin: 0;
 }
 
 .form input,
@@ -77,8 +76,12 @@ textarea::placeholder {
   padding-right: 10px;
   padding-left: 17px;
   box-sizing: border-box;
-  padding-top: 16px;
+  padding-top: 11px;
   padding-bottom: 14px;
+  font-family: "PT Mono","Arial",sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 22px;
 
   &:hover {
     background-color: #71c3f2;
@@ -87,7 +90,6 @@ textarea::placeholder {
   &:active,
   &:focus {
     background-color: #6bbfef;
-    color: rgba(255, 255, 255, 0.3);
   }
 }
 
@@ -116,17 +118,32 @@ textarea::placeholder {
   padding-bottom: 13px;
   letter-spacing: 0.05em;
   width: 47%;
-  margin-bottom: 119px;
 }
 
 .form__row--submit {
   display: flex;
   justify-content: space-between;
+  position: relative;
+}
+
+.form__row--submit input[type=checkbox] {
+  left: 56%;
+  top: 15px;
 }
 
 .form__row--submit label {
   position: relative;
   width: 40%;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.5;
+  }
 }
 
 .form__row--submit input + label::before,
@@ -135,21 +152,22 @@ textarea::placeholder {
   position: absolute;
   background-repeat: no-repeat;
   background-position: 0 0;
+  cursor: pointer;
 }
 
 .form__row--submit input + label::before {
   width: 16px;
   height: 16px;
-  left: -32;
-  top: 3px;
+  left: -34px;
+  top: 5px;
   border: 1px solid #FFFFFF;
 }
 
 .form__row--submit input:checked + label::after {
   width: 7px;
   height: 7px;
-  left: -26px;
-  top: 9px;
+  left: -29px;
+  top: 10px;
   background-image: url("/img/checkbox-on.svg");
 }
 
@@ -165,7 +183,7 @@ textarea::placeholder {
 
   .questions__wrapper {
     max-width: 100%;
-    padding-left: 78px;
+    padding-left: 60px;
     padding-right: 74px;
     margin: 0 auto;
   }
@@ -177,11 +195,17 @@ textarea::placeholder {
   .questions h2 {
     font-size: 32px;
     line-height: 45px;
-    padding-top: 83px;
+    padding-top: 80px;
+    padding-bottom: 15px;
   }
 
   .questions p {
     padding-bottom: 60px;
+  }
+
+  .form {
+    padding-bottom: 85px;
+    padding-right: 0;
   }
 
   .form input,
@@ -191,16 +215,20 @@ textarea::placeholder {
 
   .form textarea {
     height: 164px;
+    margin-bottom: 37px;
   }
 
   .form__row--submit button {
     padding-top: 15px;
     padding-bottom: 14px;
-    margin-bottom: 103px;
   }
 
   .form__row--submit label {
     padding-top: 7px;
+  }
+
+  .form__row--submit input[type=checkbox] {
+    top: 20px;
   }
 
   .form__row--submit input+label::before {
@@ -233,16 +261,18 @@ textarea::placeholder {
   }
 
   .questions .form {
-    padding: 0 5px;
+    padding: 0 5px 30px 10px;
   }
 
   .form input,
   .form textarea {
     margin-bottom: 33px;
+    padding-top: 10px;
   }
 
   .form textarea {
     height: 105px;
+    margin-bottom: 30px;
   }
 
   .questions .form__row--input {
@@ -259,14 +289,14 @@ textarea::placeholder {
   }
 
   .form__row--submit button {
-    margin-bottom: 30px;
     width: 100%;
+    margin-bottom: 26px;
   }
 
   .form__row--submit label {
     box-sizing: border-box;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: -10px;
     padding-left: 35px;
   }
 
@@ -282,5 +312,10 @@ textarea::placeholder {
 
   .form__row--submit label {
     padding-top: 0;
+  }
+
+  .form__row--submit input[type=checkbox] {
+    left: 3px;
+    top: 60px;
   }
 }

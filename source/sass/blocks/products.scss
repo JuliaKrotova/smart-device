@@ -28,7 +28,7 @@
 }
 
 .products li {
-  width: 31%;
+  width: 31.3%;
   min-height: 620px;
   margin-right: 3%;
   background-color: #1B2D37;
@@ -120,7 +120,7 @@
 @media (max-width: 1023px) {
   .products__wrapper {
     padding-left: 25px;
-    padding-right: 24px;
+    padding-right: 26px;
   }
 
   .products h2 {
@@ -152,9 +152,10 @@
   }
 
   .products h3 {
-    padding-top: 41px;
+    padding-top: 42px;
     padding-left: 44px;
     padding-right: 43px;
+    width: 165px;
   }
 }
 
@@ -180,7 +181,7 @@
   }
 
   .products h3 {
-    padding-top: 25px;
+    padding-top: 28px;
     padding-left: 35px;
     padding-right: 35px;
   }

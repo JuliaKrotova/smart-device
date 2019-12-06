@@ -14,7 +14,7 @@
 .advantages li {
   position: relative;
   width: 48%;
-  margin-right: 4%;
+  margin-right: 3.4%;
   margin-bottom: 30px;
   border: 1px solid #EBEBEB;
   border-left: 3px solid #00B2FF;
@@ -71,6 +71,7 @@
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 24px;
   line-height: 34px;
+  font-weight: 400;
   color: #00B2FF;
   margin: 0;
   padding: 95px 45px 15px;
@@ -90,10 +91,11 @@
 
   .advantages li {
     min-height: 233px;
+    margin-right: 3.8%;
   }
 
   .advantages h3 {
-    padding: 64px 15px 8px 27px;
+    padding: 64px 15px 11px 27px;
   }
 
   .advantages p {
@@ -147,7 +149,7 @@
   .advantages h3 {
     font-size: 20px;
     line-height: 28px;
-    padding-top: 71px;
+    padding-top: 72px;
     padding-bottom: 8px;
   }
 

@@ -39,7 +39,7 @@
   box-sizing: border-box;
   padding-left: 191px;
   width: 100%;
-  margin-bottom: 21px;
+  margin-bottom: 23px;
   margin-top: 0;
 }
 
@@ -69,7 +69,6 @@
 }
 
 @media (max-width: 1023px) {
-
   .about-us h2 {
     font-size: 32px;
     line-height: 45px;
@@ -100,14 +99,14 @@
     }
     width: 163px;
     height: 363px;
-    left: 0px;
+    left: 0;
     top: -9px;
   }
 
   .about-us button {
-    margin-left: 185px;
+    margin-left: 188px;
     margin-bottom: 83px;
-    margin-top: 38px;
+    margin-top: 43px;
   }
 }
 
@@ -124,8 +123,8 @@
     font-size: 28px;
     line-height: 39px;
     padding: 0;
-    margin-top: -5px;
-    margin-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 25px;
   }
 
   .about-us__description--height {
@@ -141,7 +140,7 @@
 
   .about-us button {
     margin-left: 2px;
-    margin-bottom: 62px;
+    margin-bottom: 65px;
     margin-top: 33px;
   }
 }

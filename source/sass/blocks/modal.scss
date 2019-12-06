@@ -15,7 +15,7 @@
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: rgba(128, 128, 128, 0.8);
+  background-color: rgba(17, 29, 35, 0.9);
   z-index: 1;
 }
 
@@ -47,6 +47,7 @@
 .modal .questions__wrapper p {
   margin: 0;
   padding-bottom: 36px;
+  width: 370px;
 }
 
 .modal .form {
@@ -70,11 +71,14 @@
 .modal .form__row--input input {
   width: 100%;
   margin-bottom: 30px;
+  padding-left: 22px;
+  padding-top: 12px;
 }
 
 .modal textarea {
-  margin-bottom: 33px;
+  margin-bottom: 37px;
   height: 104px;
+  padding-top: 18px;
 }
 
 .modal .form__row--submit label {
@@ -85,25 +89,34 @@
 }
 
 .modal .form__row--submit input + label::before {
-  left: 0;
-  top: 3px;
+  left: -2px;
+  top: 4px;
 }
 
 .modal .form__row--submit input:checked + label::after {
-  left: 5;
+  left: 3px;
   top: 9px;
 }
 
 .modal-close {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 17px;
+  right: 24px;
   width: 17px;
   height: 17px;
   font-size: 0;
   background-color: transparent;
   border: 0;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.5;
+  }
 }
 
 .modal-close::after,
@@ -123,4 +136,21 @@
 
 .modal-close::after {
   transform: rotate(-45deg);
+}
+
+.modal-privacy {
+  &:hover {
+    background-color: #71c3f2;
+  }
+
+  &:active,
+  &:focus {
+    background-color: #6bbfef;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.modal input[type=checkbox] {
+  left: 3%;
+  top: 90px;
 }

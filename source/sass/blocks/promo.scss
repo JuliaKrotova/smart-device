@@ -3,6 +3,8 @@
   top: 260;
   width: 100%;
   color: #ffffff;
+  overflow: hidden;
+  padding-bottom: 200px;
 }
 
 .promo__image {
@@ -50,16 +52,28 @@
   left: -93px;
 }
 
-.promo button,
-.promo button::before {
+.promo .promo__button {
   position: relative;
   z-index: 1;
   font-size: 16px;
   line-height: 19px;
-  padding: 18px 59px;
+  padding: 18px 45px;
   margin-left: 92px;
-  margin-bottom: 275px;
+  margin-bottom: 85px;
   margin-top: 12px;
+  letter-spacing: 0.05em;
+}
+
+.promo__scroll {
+  position: absolute;
+  display: block;
+  color: rgba(255, 255, 255, 0.5);
+  transform: rotate(270deg);
+  width: 95px;
+  font-size: 14px;
+  line-height: 16px;
+  left: -16px;
+  top: 475px;
 }
 
 @media (max-width: 1023px) {
@@ -83,7 +97,7 @@
     font-size: 18px;
     line-height: 26px;
     margin-left: 114px;
-    margin-bottom: 37px;
+    margin-bottom: 39px;
     width: 356px;
   }
 
@@ -93,9 +107,9 @@
     left: -48px;
   }
 
-  .promo button {
+  .promo .promo__button {
     padding-left: 32px;
-    padding-right: 57px;
+    padding-right: 33px;
     margin-left: 114px;
     margin-bottom: 163px;
     margin-top: 19px;
@@ -104,6 +118,10 @@
   .promo__image {
     top: -78px;
     right: 0;
+  }
+
+  .promo__scroll {
+    display: none;
   }
 }
 
@@ -128,6 +146,8 @@
     margin-left: 15px;
     margin-right: 15px;
     width: 100%;
+    padding-right: 15px;
+    box-sizing: border-box;
   }
 
   .promo p {
@@ -152,7 +172,7 @@
     left: 0;
   }
 
-  .promo button {
+  .promo .promo__button {
     visibility: hidden;
     display: block;
     margin-left: auto;
@@ -162,9 +182,10 @@
     margin-top: 5px;
     padding-left: 18px;
     padding-right: 18px;
+    letter-spacing: 0.12em;
   }
 
-  .promo button::after {
+  .promo .promo__button::after {
     content: "Бесплатная консультация";
     visibility: visible;
     display: block;
@@ -179,7 +200,7 @@
     background: #00B2FF;
     border-radius: 5px;
     border: none;
-    padding: 17px 28px;
+    padding: 17px 28px 22px;
     margin-bottom: 70px;
   }
 }
