@@ -1,21 +1,21 @@
 .questions {
-  background: url("/img/airplane@1x.png") no-repeat 15% 61px,#00b2ff;
+  background: url("../img/airplane@1x.png") no-repeat 15% 61px,#00b2ff;
   background-repeat: no-repeat;
   color: #ffffff;
 }
 @media (max-width: 1700px) {
   .questions {
-    background: url("/img/airplane@1x.png") no-repeat -20px 61px,#00b2ff;
+    background: url("../img/airplane@1x.png") no-repeat -20px 61px,#00b2ff;
   }
 }
 @media (max-width: 1450px) {
   .questions {
-    background: url("/img/airplane@1x.png") no-repeat -130px 61px,#00b2ff;
+    background: url("../img/airplane@1x.png") no-repeat -130px 61px,#00b2ff;
   }
 }
 @media (max-width: 1200px) {
   .questions {
-    background: url("/img/airplane@1x.png") no-repeat -300px 61px,#00b2ff;
+    background: url("../img/airplane@1x.png") no-repeat -300px 61px,#00b2ff;
   }
 }
 
@@ -168,7 +168,7 @@ textarea::placeholder {
   height: 7px;
   left: -29px;
   top: 10px;
-  background-image: url("/img/checkbox-on.svg");
+  background-image: url("../img/checkbox-on.svg");
 }
 
 @media (max-width: 1023px) {

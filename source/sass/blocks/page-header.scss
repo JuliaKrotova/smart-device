@@ -1,8 +1,8 @@
 .page-header {
   background-color: #1B2D37;
-  background-image: url("/img/background-desktop@1x.png");
+  background-image: url("../img/background-desktop@1x.png");
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("/img/background-desktop@2x.png");
+    background-image: url("../img/background-desktop@2x.png");
     background-size: 1920px auto;
   }
   color: #FFFFFF;

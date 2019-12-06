@@ -108,14 +108,14 @@ input, textarea, select {
 }
 
 .page-main {
-  background: url("/img/triangle1.svg"),url("/img/triangle2.svg"),url("/img/triangle3.svg"),url("/img/triangle4.svg");
+  background: url("../img/triangle1.svg"),url("../img/triangle2.svg"),url("../img/triangle3.svg"),url("../img/triangle4.svg");
   background-position: left 430px,200px 30px,53% 130px,top 380px right 30px;
   background-repeat: no-repeat;
 }
 
 @media (max-width: 1023px) {
   .page-main {
-    background: url("/img/triangle-tablet.svg");
+    background: url("../img/triangle-tablet.svg");
     background-position: right 75px;
     background-repeat: no-repeat;
   }
@@ -123,7 +123,7 @@ input, textarea, select {
 
 @media (max-width: 767px) {
   .page-main {
-    background: url("/img/triangle-mobile.svg");
+    background: url("../img/triangle-mobile.svg");
     background-position: right 635px;
     background-repeat: no-repeat;
   }

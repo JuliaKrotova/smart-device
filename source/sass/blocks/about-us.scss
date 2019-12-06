@@ -13,11 +13,11 @@
   width: 317px;
   height: 220px;
   margin: 0;
-  background-image: url("/img/2005-desktop@1x.png");
+  background-image: url("../img/2005-desktop@1x.png");
   width: 220px;
   height: 317px;
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("/img/2005-desktop@2x.png");
+    background-image: url("../img/2005-desktop@2x.png");
     background-size: 220px auto;
   }
 }
@@ -92,9 +92,9 @@
   }
 
   .about-us__wrapper::after {
-    background-image: url("/img/2005-tablet@1x.png");
+    background-image: url("../img/2005-tablet@1x.png");
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("/img/2005-tablet@2x.png");
+      background-image: url("../img/2005-tablet@2x.png");
       background-size: 163px auto;
     }
     width: 163px;
