@@ -26,20 +26,20 @@ document.addEventListener('DOMContentLoaded', function() {
   var modalNameInput = document.querySelector('.modal input[name=name]');
 
   sectionsToggle.addEventListener('click', function() {
-    if (sections.classList.contains('page-footer__sections--close')) {
-      sections.classList.remove('page-footer__sections--close');
-      address.classList.add('page-footer__address--close');
+    if (sections.classList.contains('page-footer__sections--open')) {
+      sections.classList.remove('page-footer__sections--open');
     } else {
-      sections.classList.add('page-footer__sections--close');
+      sections.classList.add('page-footer__sections--open');
+      address.classList.remove('page-footer__address--open');
     }
   });
 
   addressToggle.addEventListener('click', function() {
-    if (address.classList.contains('page-footer__address--close')) {
-      address.classList.remove('page-footer__address--close');
-      sections.classList.add('page-footer__sections--close');
+    if (address.classList.contains('page-footer__address--open')) {
+      address.classList.remove('page-footer__address--open');
     } else {
-      address.classList.add('page-footer__address--close');
+      address.classList.add('page-footer__address--open');
+      sections.classList.remove('page-footer__sections--open');
     }
   });
 
