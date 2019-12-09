@@ -159,7 +159,7 @@
                 <form action="" method="get">
                   <div class="form__row--input">
                     <input type="text" name="name" placeholder="Имя" required>
-                    <input type="tel" name="phone" placeholder="Телефон" id="phone-mask" required>
+                    <input type="tel" pattern=".{16,}" name="phone" placeholder="Телефон" id="phone-mask" required>
                   </div>
                   <div class="form__row">
                     <textarea name="question" placeholder="Ваш вопрос" required></textarea>
@@ -287,7 +287,7 @@
           <form action="" method="get">
             <div class="form__row--input">
               <input type="text" name="name" placeholder="Имя" required>
-              <input id="modal-phone-mask" type="tel" name="phone" placeholder="Телефон" required>
+              <input id="modal-phone-mask" pattern=".{16,}" type="tel" name="phone" placeholder="Телефон" required>
             </div>
             <div class="form__row">
               <textarea name="question" placeholder="Ваш вопрос" required></textarea>
