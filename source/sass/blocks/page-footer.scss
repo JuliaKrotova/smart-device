@@ -283,6 +283,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 0;
+    position: relative;
   }
 
   .page-footer__address button,
@@ -308,7 +309,7 @@
     width: 16px;
     height: 1px;
     top: 36px;
-    right: 32px;
+    right: 2px;
     background-color: #C4C4C4;
   }
 
@@ -338,7 +339,7 @@
     width: 1px;
     height: 16px;
     top: 29px;
-    right: 39px;
+    right: 10px;
     background-color: #C4C4C4;
 
     &:hover {
